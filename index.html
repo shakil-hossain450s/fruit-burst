@@ -11,7 +11,9 @@
     <!-- lato google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- customize configuration -->
     <script>
         tailwind.config = {
@@ -19,13 +21,14 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        theme: '#F85559',
                     }
                 }
             }
         }
     </script>
     <style>
-        .font-lato{
+        .font-lato {
             font-family: "Lato", sans-serif;
         }
     </style>
@@ -33,12 +36,136 @@
 
 <body class="font-lato">
     <!-- header start -->
-    <header>
+    <header class="px-2 lg:px-0">
         <!-- navbar start here -->
-        <nav>
-
+        <nav class="container mx-auto px-6 lg:px-20 my-4 lg:my-10">
+            <div class="bg-theme rounded-full md:px-8">
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden lg:flex space-x-4 text-white font-medium">
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <img src="./images/logo.png" alt="">
+                        <h6 class="ml-2 text-2xl font-semibold text-white">Fruit Burst</h6>
+                    </div>
+                    <div class="navbar-end hidden md:flex">
+                        <div class="bg-white flex justify-between items-center px-6 py-2 rounded-full">
+                            <input class="border-0 outline-0 text-[#121212]" type="text" placeholder="Search">
+                            <a href="#">
+                                <img src="./images/search.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
         <!-- navbar end here -->
+        <!-- banner section start here -->
+        <section class="container mx-auto px-6 lg:px-20">
+            <!-- slider container -->
+            <div class="carousel w-full">
+                <!-- slide 1 -->
+                <div id="slide1" class="carousel-item py-10 relative w-full lg:h-[500px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner1.png)] bg-center rounded-lg flex justify-center items-center">
+                    <div class="text-center text-white">
+                        <h2 class="text-3xl lg:text-7xl font-extrabold">Exotic tastes at your <br> doorstep</h2>
+                        <p class="w-2/3 mx-auto my-3 lg:my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga reprehenderit minima natus aspernatur eveniet et?</p>
+                        <button class="btn bg-theme border-0 text-white hover:bg-theme px-8">Shop Now</button>
+                    </div>
+                    <div class="absolute left-2 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div id="slide2" class="carousel-item py-10 relative w-full lg:h-[500px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner2.png)] bg-center rounded-lg flex justify-center items-center">
+                    <div class="text-center text-white">
+                        <h2 class="text-3xl lg:text-7xl font-extrabold">Exotic tastes at your <br> doorstep</h2>
+                        <p class="w-2/3 mx-auto my-3 lg:my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga reprehenderit minima natus aspernatur eveniet et?</p>
+                        <button class="btn bg-theme border-0 text-white hover:bg-theme px-8">Shop Now</button>
+                    </div>
+                    <div class="absolute left-2 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div id="slide3" class="carousel-item py-10 relative w-full lg:h-[500px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner3.png)] bg-center rounded-lg flex justify-center items-center">
+                    <div class="text-center text-white">
+                        <h2 class="text-3xl lg:text-7xl font-extrabold">Exotic tastes at your <br> doorstep</h2>
+                        <p class="w-2/3 mx-auto my-3 lg:my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga reprehenderit minima natus aspernatur eveniet et?</p>
+                        <button class="btn bg-theme border-0 text-white hover:bg-theme px-8">Shop Now</button>
+                    </div>
+                    <div class="absolute left-2 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide 4 -->
+                <div id="slide4" class="carousel-item py-10 relative w-full lg:h-[500px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner4.png)] bg-center rounded-lg flex justify-center items-center">
+                    <div class="text-center text-white">
+                        <h2 class="text-3xl lg:text-7xl font-extrabold">Exotic tastes at your <br> doorstep</h2>
+                        <p class="w-2/3 mx-auto my-3 lg:my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga reprehenderit minima natus aspernatur eveniet et?</p>
+                        <button class="btn bg-theme border-0 text-white hover:bg-theme px-8">Shop Now</button>
+                    </div>
+                    <div class="absolute left-2 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden min-h-24 w-4/5 mx-auto lg:-translate-y-24 bg-white rounded-lg shadow-lg p-8 lg:flex justify-between items-center">
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/fruit1.png" alt="">
+                    <p class="text-[#121212] text-lg font-medium">Grape</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/fruit2.png" alt="">
+                    <p class="text-[#121212] text-lg font-medium">Orange</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/fruit3.png" alt="">
+                    <p class="text-[#121212] text-lg font-medium">Mango</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/fruit4.png" alt="">
+                    <p class="text-[#121212] text-lg font-medium">Strawberry</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img src="./images/fruit5.png" alt="">
+                    <p class="text-[#121212] text-lg font-medium">Bedana</p>
+                </div>
+            </div>
+        </section>
+        <!-- banner section end here -->
     </header>
     <!-- header end -->
     <!-- main start -->
